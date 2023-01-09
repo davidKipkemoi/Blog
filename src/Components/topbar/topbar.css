@@ -1,18 +1,43 @@
 .top{
     width: 100%;
-    height: 50px;
-    background-color: bisque;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
     position: sticky;
     top:0;
     display: flex;
     align-items: center;
     font-family: 'Passions Conflict', cursive;
+    justify-content: center;
 }
 .topLeft,.topRight{
     flex:3;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.topIcon{
+    font-size: 40px;
+    margin-right: 20px;
 }
 .topCenter{
     flex:6;
-
+}
+.topList{
+display: flex;
+list-style: none;
+}
+.topListItem{
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: xx-large;
+}
+.topSearch{
+    margin-left: 10px;
+    justify-content: center;
 }
