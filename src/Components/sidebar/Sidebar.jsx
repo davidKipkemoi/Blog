@@ -11,6 +11,8 @@ export default function Sidebar() {
             alt=''
             />
         </div>
+        <span></span>
+        <span></span>
     </div>
   )
 }
