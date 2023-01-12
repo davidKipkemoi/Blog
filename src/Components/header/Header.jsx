@@ -5,7 +5,9 @@ export default function  Header() {
   return (
     <div className='header'>
       <div className="headerTitles">
-        <span className='headerTitlesSm'> Kenya   </span>
+        <span className='headerTitlesSm'>
+          
+           Kenya   </span>
         <span className='headerTitlesLg'>Nairobi</span>
       </div>
       <img

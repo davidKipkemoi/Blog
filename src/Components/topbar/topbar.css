@@ -8,6 +8,8 @@
     align-items: center;
     font-family: 'Passions Conflict', cursive;
     justify-content: center;
+    z-index: 1;
+
 }
 .topLeft,.topRight{
     flex:3;
