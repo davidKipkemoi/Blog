@@ -5,9 +5,10 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+        <span className="sidebarTitle">H A K U N A <br></br>
+                                      M A T A T A</span>
         <img
-          src="https://images.pexels.com/photos/7557608/pexels-photo-7557608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.pexels.com/photos/5989890/pexels-photo-5989890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
         />
         <p>
@@ -16,7 +17,7 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
+        <span className="sidebarTitle">C A T E G O R I E S</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
             

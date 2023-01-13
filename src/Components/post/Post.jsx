@@ -23,7 +23,7 @@ export default function Post({img}) {
         </div>
         <span className="postTitle">
           
-            Lorem ipsum dolor sit amet
+             SAFIRI SAVANNAH
           
         </span>
         <hr />
