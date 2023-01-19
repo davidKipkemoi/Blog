@@ -5,7 +5,7 @@ export default function Write() {
     <div className="write">
       <img
         className="writeImg"
-        src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        src="https://images.pexels.com/photos/7280783/pexels-photo-7280783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt=""
       />
       <form className="writeForm">
