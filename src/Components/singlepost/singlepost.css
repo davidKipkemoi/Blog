@@ -1,0 +1,65 @@
+.singlePost {
+    flex: 9;
+  }
+  
+  .singlePostWrapper {
+    padding: 20px;
+    padding-right: 0;
+  }
+  
+  .singlePostImg {
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .singlePostTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: 'Passions Conflict', cursive;
+  }
+  
+  .singlePostEdit {
+    float: right;
+    font-size: 16px;
+  }
+  
+  .singlePostIcon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .singlePostIcon:first-child {
+    color: teal;
+  }
+  .singlePostIcon:last-child {
+    color: rgb(255, 38, 0);
+  }
+  
+  .singlePostInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #8e2c2c;
+    font-family: "Varela Round", sans-serif;
+  }
+  
+  .singlePostAuthor{
+    margin-left: 5px;
+  }
+  
+  .singlePostDesc {
+    color: rgb(16, 5, 5);
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Passions Conflict', cursive;
+  }
+  
+  .singlePostDesc::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
