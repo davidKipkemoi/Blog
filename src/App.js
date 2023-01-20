@@ -1,13 +1,20 @@
 import TopBar from "./Components/topbar/TopBar";
-import Signup from "./Components/pages/Signup/Signup";
-
+import Home from './Components/pages/home/Home/Home'
+import Write from './Components/pages/Write/Write'
+import  {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 function App() {
   return (
-    <>
+    <Router>
       <TopBar/>
-      <Signup/>
-    </>
-   
+        <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="/write">
+          <Write/>
+        </Route>
+        </Switch>
+    </Router>
   );
 }
 
