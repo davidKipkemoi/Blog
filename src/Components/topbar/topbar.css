@@ -44,3 +44,7 @@ list-style: none;
     margin-left: 10px;
     justify-content: center;
 }
+.Link{
+    text-decoration: none;
+    color: inherit;
+}
