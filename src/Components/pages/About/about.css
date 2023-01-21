@@ -1,14 +1,15 @@
 
 .container{
-
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
+ 
+    
+    max-width: 500px;
+    align-items: right;
+    justify-content: right;
+    background: rgb(12, 10, 31);
     border-radius: 10px;
-    box-shadow: 0 20px 100px rgba(119, 0, 255, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
+    box-shadow: 0 3px 10px rgb(36, 22, 22);
+    
+    margin: 5% 3% 0% 30%;
 }
 
 .container .forms{
@@ -148,7 +149,7 @@
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 1px;
-    border-radius: 6px;
+    border-radius: 30px;
     background-color: #4070f4;
     cursor: pointer;
     transition: all 0.3s ease;

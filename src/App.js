@@ -2,17 +2,37 @@ import TopBar from "./Components/topbar/TopBar";
 import Home from './Components/pages/home/Home/Home'
 import Write from './Components/pages/Write/Write'
 import  {BrowserRouter as Router,Route, Switch} from "react-router-dom";
-import About from "./Components/pages/About/About";
+import Login from "./Components/pages/Login/Login";
+import Settings from "./Components/pages/Settings/Settings";
+import Signup from "./Components/pages/Signup/Signup";
+import Single from "./Components/pages/Single/Single";
+
+
+
 function App() {
+  const user = true;
   return (
+    
     <Router>
       <TopBar/>
         <Switch>
         <Route exact path="/">
-          <About/>
+          <Home/>
         </Route>
         <Route path="/write">
-          <Write/>
+          {user ? <Home/>:<Write/>}
+        </Route>
+        <Route path="/settings">
+        {user ? <Home/>:<Settings/>}
+        </Route>
+        <Route path="/signup">
+          <Signup/>
+        </Route>
+        <Route path="/post/:postId">
+          <Single/>
+        </Route>
+        <Route path="/login">
+          <Login/>
         </Route>
         </Switch>
     </Router>
