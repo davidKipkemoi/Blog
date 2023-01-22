@@ -10,7 +10,7 @@ import Single from "./Components/pages/Single/Single";
 
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     
     <Router>
@@ -23,7 +23,7 @@ function App() {
           {user ? <Home/>:<Write/>}
         </Route>
         <Route path="/settings">
-        {user ? <Home/>:<Settings/>}
+          {user ? <Home/>:<Settings/>}
         </Route>
         <Route path="/signup">
           <Signup/>

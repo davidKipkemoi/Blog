@@ -1,6 +1,7 @@
 .posts{
     flex: 9;
     display: flex;
+    flex-flow: row;
+    margin-top: 30px;
     flex-wrap: wrap;
-    margin: 20px;
 }

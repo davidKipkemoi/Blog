@@ -47,4 +47,5 @@ list-style: none;
 .Link{
     text-decoration: none;
     color: inherit;
+    margin: 10px;
 }
