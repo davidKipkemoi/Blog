@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.listen('5000',()=>{
-    console.log('Backend Running David')
+
+
+app.listen('4000', ()=>{
+    console.log('Server started')
 })
