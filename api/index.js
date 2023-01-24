@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 const authRoute = require('./routes/auth')
-
+mongoose.set('strictQuery', false)
 dotenv.config();
 app.use(express.json())
 
@@ -12,6 +12,6 @@ mongoose.connect(process.env.MONGO_URL)
 .catch((err)=>console.log(err))
 
 app.use("/api/auth ", authRoute);
-app.listen("8000", ()=>{
+app.listen("6000", ()=>{
     console.log('Server started')
 });
