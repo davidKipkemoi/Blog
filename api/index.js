@@ -1,17 +1,25 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv')
-const mongoose = require('mongoose')
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
 const authRoute = require('./routes/auth')
-mongoose.set('strictQuery', false)
 dotenv.config();
+
+
+mongoose.set('strictQuery', true)
+        mongoose.connect(process.env.MONGO_URL,{
+            useNewUrlParser:true,
+            useUnifiedTopology:true,
+            
+            
+        }).then(console.log("Connected to Mongo"))
+          .catch((err)=>console.log((err)))
+  
+
+
+
 app.use(express.json())
-
-mongoose.connect(process.env.MONGO_URL)
-.then(console.log('Mongo Connected'))  
-.catch((err)=>console.log(err))
-
 app.use("/api/auth ", authRoute);
-app.listen("6000", ()=>{
+app.listen("9000", ()=>{
     console.log('Server started')
 });
