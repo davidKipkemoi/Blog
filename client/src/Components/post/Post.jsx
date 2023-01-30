@@ -10,21 +10,15 @@ export default function Post({img}) {
       />
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">
-            
+          <span className="postCat"> 
               Music
-            
           </span>
           <span className="postCat">
-            
-              Life
-            
+             Life
           </span>
         </div>
         <span className="postTitle">
-          
              SAFIRI SAVANNAH
-          
         </span>
         <hr />
         <span className="postDate">1 hour ago</span>
