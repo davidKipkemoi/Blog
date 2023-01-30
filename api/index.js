@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users');
+const categoryRoute = require('./routes/categories');
 dotenv.config();
 
 mongoose.connect(
@@ -23,7 +24,8 @@ mongoose.connect(
 
 app.use(express.json())
 app.use("/api/auth",authRoute);
-app.use("/api/users",userRoute)
+app.use("/api/users",userRoute);
+app.use("/api/categories",categoryRoute);
 app.listen("9000", ()=>{
     console.log('Server started');
 });
