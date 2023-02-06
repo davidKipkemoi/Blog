@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./singlepost.css";
+import { Link } from "react-router-dom";
 
 export default function SinglePost() {
   const location = useLocation();
@@ -10,20 +11,21 @@ export default function SinglePost() {
   const [post,setPost] = useState({})
   useEffect(()=>{
     const getPosts = async() =>{
-      const res = await axios.get("/posts/" + path )
+      const res = await axios.get("/posts/"  + path )
       setPost(res.data)
     };getPosts();
   },[path]);
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        <img
+        {post.photo &&  <img
           className="singlePostImg"
           src="https://images.pexels.com/photos/6368147/pexels-photo-6368147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
-        />
+        />}
+        
         <h1 className="singlePostTitle">
-          Lorem ipsum dolor
+          {post.title}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -33,43 +35,19 @@ export default function SinglePost() {
           <span>
             Author:
             <b className="singlePostAuthor">
-              {/* <Link className="link" to="/posts?username=david">
-                David
-              </Link> */}
+              <Link className="link" to={`/?user=${post.username}`}>
               {post.username}
+              </Link>
+              
             </b>
           </span>
-          <span>1 day ago</span>
+          <div  className="singlePostDate" to=''>
+          <span>{new Date(post.createdAt).toDateString()}</span>
+          </div>
+         
         </div>
         <p className="singlePostDesc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit!
-          Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi
-          eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-          error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-          impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a
-          odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos!
-          <br />
-          <br />
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit!
-          Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi
-          eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-          error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-          impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a
-          odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur.
+         {post.desc}
         </p>
       </div>
     </div>

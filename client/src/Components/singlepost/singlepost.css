@@ -12,8 +12,13 @@
     height: 600px;
     border-radius: 5px;
     object-fit: cover;
+    box-shadow: 1px 0px 2px 0px rgb(0, 0, 0)
+    
+
   }
-  
+  .singlePostImg:hover{
+    box-shadow: 2px 2px 5px 0px rgba(143, 57, 57, 0.799)
+  }
   .singlePostTitle {
     text-align: center;
     margin: 10px;

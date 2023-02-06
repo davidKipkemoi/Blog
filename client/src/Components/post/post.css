@@ -10,6 +10,7 @@
     height: 280px;
     object-fit: cover;
     border-radius: 7px;
+    box-shadow: 30 4px 15px 30 rgba(60, 0, 255, 0.2)
   }
   
   .postInfo {
