@@ -2,14 +2,12 @@ import React from 'react'
 import Post from '../post/Post'
 import "./posts.css"
 
-export default function Posts({fPost}) {
+export default function Posts({gallery}) {
   return (
     <div className='posts'>
-   {fPost.map((p)=>(
-     <Post  img="https://images.pexels.com/photos/5125528/pexels-photo-5125528.jpeg"/>
+   {gallery.map((p,i) =>(
+     <Post post={p} key = {i} />
    ))}
-   
-   
-    </div>
+   </div>
   )
 }

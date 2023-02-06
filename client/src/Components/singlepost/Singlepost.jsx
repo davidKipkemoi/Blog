@@ -1,6 +1,19 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./singlepost.css";
 
 export default function SinglePost() {
+  const location = useLocation();
+  const path = location.pathname.split('/')[2]; 
+
+  const [post,setPost] = useState({})
+  useEffect(()=>{
+    const getPosts = async() =>{
+      const res = await axios.get("/posts/" + path )
+      setPost(res.data)
+    };getPosts();
+  },[path]);
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -23,7 +36,7 @@ export default function SinglePost() {
               {/* <Link className="link" to="/posts?username=david">
                 David
               </Link> */}
-              David
+              {post.username}
             </b>
           </span>
           <span>1 day ago</span>
