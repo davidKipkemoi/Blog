@@ -1,4 +1,5 @@
 import "./write.css";
+import Button from '@mui/material/Button';
 
 export default function Write() {
   return (
@@ -20,6 +21,7 @@ export default function Write() {
             type="text"
             autoFocus={true}
           />
+           <Button  className="" variant="contained">Submited</Button>
         </div>
         <div className="writeFormGroup">
           <textarea
@@ -28,10 +30,9 @@ export default function Write() {
             type="text"
             autoFocus={true}
           />
+         
         </div>
-        <button className="writeSubmit" type="submit">
-          Publish
-        </button>
+        
       </form>
     </div>
   );

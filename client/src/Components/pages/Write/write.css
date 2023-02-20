@@ -56,17 +56,3 @@
     font-size: 20px;
   }
   
-  .writeSubmit {
-    position:absolute;
-    top: 20px;
-    right: 280px;
-    color: white;
-    background-color:rgb(209, 28, 28);
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
