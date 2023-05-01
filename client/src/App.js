@@ -6,11 +6,14 @@ import Login from "./Components/pages/Login/Login";
 import Settings from "./Components/pages/Settings/Settings";
 import Signup from "./Components/pages/Signup/Signup";
 import Single from "./Components/pages/Single/Single";
+import { useContext } from "react";
+import { Context } from "./Components/context/Context";
+import About from "./Components/pages/About/About";
 
 
 
 function App() {
-  const user = false;
+  const {user} = useContext(Context);
   return (
     
     <Router>
@@ -18,6 +21,9 @@ function App() {
         <Switch>
         <Route exact path="/">
           <Home/>
+        </Route>
+        <Route exact path="/about">
+          <About/>
         </Route>
         <Route path="/write">
           {user ? <Write/>:<Signup/>}

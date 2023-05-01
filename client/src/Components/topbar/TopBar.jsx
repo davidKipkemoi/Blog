@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
 import "./topbar.css"
+import { useContext } from "react";
+import { Context } from "../context/Context";
 export default function TopBar() {
-  const user = false;
+  const {user} = useContext(Context);
   return (
    <div className="top">
       <div className="topLeft">
@@ -17,7 +19,7 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className='Link' to='/'>
+            <Link className='Link' to='/About'>
               About
             </Link>
           </li>
