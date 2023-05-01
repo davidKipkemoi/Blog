@@ -20,19 +20,19 @@ function App() {
           <Home/>
         </Route>
         <Route path="/write">
-          {user ? <Home/>:<Write/>}
+          {user ? <Write/>:<Signup/>}
         </Route>
         <Route path="/settings">
-          {user ? <Home/>:<Settings/>}
+          {user ? <Settings/>:<Signup/>}
         </Route>
         <Route path="/signup">
-          <Signup/>
+          {user ? <Home/>:<Signup/>}
         </Route>
         <Route path="/post/:postId">
           <Single/>
         </Route>
         <Route path="/login">
-          <Login/>
+        {user ? <Home/>:<Login/>}
         </Route>
         </Switch>
     </Router>

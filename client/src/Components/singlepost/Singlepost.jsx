@@ -8,6 +8,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split('/')[2]; 
 
+
   const [post,setPost] = useState({})
   useEffect(()=>{
     const getPosts = async() =>{
@@ -20,7 +21,7 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         {post.photo &&  <img
           className="singlePostImg"
-          src="https://images.pexels.com/photos/6368147/pexels-photo-6368147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={post.photo}
           alt=""
         />}
         

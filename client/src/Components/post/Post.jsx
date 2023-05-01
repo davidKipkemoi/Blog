@@ -6,7 +6,7 @@ export default function Post({post}) {
     <div className="post">
       {post.photo && <img
         className="postImg"
-        src="{post.photo}"
+        src={post.photo}
         alt=""
       /> }
       
@@ -15,9 +15,6 @@ export default function Post({post}) {
           <span className="postCat"> 
               {post.categories}
           </span>
-          {/* <span className="postCat">
-             Life
-          </span> */}
         </div>
         <Link to = {`/post/${post._id}`}>
         <span className="postTitle">
