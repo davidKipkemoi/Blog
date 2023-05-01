@@ -5,14 +5,23 @@ export default function Signup() {
   const [username,setUsername] = useState("");
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const [error,setError] = useState(false);
+
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    const res = await axios.post("/auth/Ssignup",{
-      username,
-      email,
-      password
-    });
-    console.log(res) 
+    setError(false);
+    try {
+      const res = await axios.post("/auth/signup",{
+        username,
+        email,
+        password,
+      });
+      res.data && window.location.replace("/login")
+    } catch (err) {
+      setError(true);
+    }
+   
+    
   }
     return (
         <div className="register">
@@ -41,6 +50,7 @@ export default function Signup() {
         <button className="registerButton" type="submit">Register</button>
       </form>
         <button className="registerLoginButton">Login</button>
+        {error && <span style={{color:"red", marginTop:"10px"}}>Something went wrong!</span>}
     </div>
     )
 }
