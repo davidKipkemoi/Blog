@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split('/')[2]; 
-
+  const PF = "http://localhost:9000/images/"
 
   const [post,setPost] = useState({})
   useEffect(()=>{
@@ -21,7 +21,7 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         {post.photo &&  <img
           className="singlePostImg"
-          src={post.photo}
+          src={PF+post.photo}
           alt=""
         />}
         

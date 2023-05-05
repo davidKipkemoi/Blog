@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
     cb(null,"images")
   },
   filename:(req,file,cb)=>{
-    cb(null,"david.jpeg")
+    cb(null,req.body.name)
   }
 });
 
@@ -44,6 +44,7 @@ app.use("/api/auth",authRoute);
 app.use("/api/users",userRoute);
 app.use("/api/categories",categoryRoute);
 app.use("/api/posts",postsRoute);
+app.use("/images", express.static(path.join(__dirname,"/images")))
 
 app.listen("9000", ()=>{
     console.log('Server started');
