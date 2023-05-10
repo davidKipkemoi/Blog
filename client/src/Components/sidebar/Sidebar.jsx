@@ -12,7 +12,7 @@ export default function Sidebar() {
     getCat();
   },[])
   return (
-    <div className="sidebar">
+    <div className="sidebar" >
       <div className="sidebarItem">
         <span className="sidebarTitle">H A K U N A <br></br>
                                       M A T A T A</span>

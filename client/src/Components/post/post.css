@@ -10,7 +10,7 @@
     height: 280px;
     object-fit: cover;
     border-radius: 7px;
-    box-shadow: 30 4px 15px 30 rgba(60, 0, 255, 0.2)
+    box-shadow: 30 4px 15px 30 rgb(255, 0, 0)
   }
   
   .postInfo {
@@ -54,8 +54,8 @@
     line-height: 24px;
     color: #444444;
     margin-top: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow:hidden;
+    text-overflow:ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
