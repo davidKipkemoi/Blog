@@ -8,9 +8,14 @@ const {user} = useContext(Context)
 const [username,setUsername] = useState('')
 const [email,setEmail] = useState('')
 const [password,setPassword] = useState('')
-const [success,setSuccess] = useState('')
+const [success,setSuccess] = useState(false)
+const [file,setFile] = useState(null)
 
 const PF = "http://localhost:9000/images/";
+const handleSubmit = async (e) =>{
+  e.prevent.default();
+
+}
 
   return (
     <div className="settings">
@@ -19,7 +24,7 @@ const PF = "http://localhost:9000/images/";
           <span className="settingsTitleUpdate">Update Your Account</span>
           <span className="settingsTitleDelete"><i className="settingsTitleDelete fa-sharp fa-solid fa-trash"></i> Delete Account</span>
         </div>
-        <form className="settingsForm" onSubmit={""}>
+        <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img

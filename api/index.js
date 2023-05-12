@@ -46,6 +46,6 @@ app.use("/api/categories",categoryRoute);
 app.use("/api/posts",postsRoute);
 app.use("/images", express.static(path.join(__dirname,"/images")))
 
-app.listen("9000", ()=>{
+app.listen(process.env.PORT || 9000, ()=>{
     console.log('Server started');
 });
