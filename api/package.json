@@ -14,7 +14,7 @@
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "/",
+  "homepage": "https://safari-blog.herokuapp.com/",
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
