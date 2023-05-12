@@ -1,17 +1,16 @@
 import "./settings.css";
 import Sidebar from '../../sidebar/Sidebar'
-import { useContext,useState } from "react";
+import { useContext } from "react";
 import { Context } from "../../context/Context";
 
 export default function Settings() {
 const {user} = useContext(Context)
-const [username,setUsername] = useState('')
-const [email,setEmail] = useState('')
-const [password,setPassword] = useState('')
-const [success,setSuccess] = useState(false)
-const [file,setFile] = useState(null)
+// const [username,setUsername] = useState('')
+// const [email,setEmail] = useState('')
+// const [password,setPassword] = useState('')
+// const [success,setSuccess] = useState(false)
+// const [file,setFile] = useState(null)
 
-const PF = "http://localhost:9000/images/";
 const handleSubmit = async (e) =>{
   e.prevent.default();
 
@@ -42,11 +41,11 @@ const handleSubmit = async (e) =>{
             />
           </div>
           <label>Username</label>
-          <input type="text" placeholder="Username" name="name" onChange={(e)=>{setUsername(e.target.value)}}/>
+          <input type="text" placeholder="Username" name="name" />
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" name="email" onChange={(e)=>setEmail(e.target.value)} />
+          <input type="email" placeholder="Enter your email" name="email" />
           <label>Password</label>
-          <input type="password" placeholder="Password" name="password" onChange={(e)=>setPassword(e.target.value)} />
+          <input type="password" placeholder="Password" name="password"  />
           <button className="settingsSubmitButton" type="submit">
             Update
           </button>
