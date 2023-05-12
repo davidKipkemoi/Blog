@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./signup.css"
-import axios from "axios";
+import { axiosInstance } from "../../../config";
 export default function Signup() {
   const [username,setUsername] = useState("");
   const [email,setEmail] = useState("");
@@ -11,7 +11,7 @@ export default function Signup() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("/auth/signup",{
+      const res = await axiosInstance.post("/auth/signup",{
         username,
         email,
         password,
