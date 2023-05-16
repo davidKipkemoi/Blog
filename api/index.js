@@ -9,7 +9,6 @@ const postsRoute = require('./routes/posts');
 const multer = require('multer')
 const path = require("path");
 const cors = require('cors');
-const PORT = process.env.PORT || 8080
 const bodyParser = require('body-parser')
 
 dotenv.config();
@@ -55,7 +54,7 @@ app.use("/images", express.static(path.join(__dirname,"/images")))
 
 
 if (process.env.NODE_ENV === 'production'){
-  app.use(express.static("/client/build"));
+  app.use(express.static(path.join("/client/build")));
   app.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','index.html'));
   });
@@ -64,6 +63,6 @@ if (process.env.NODE_ENV === 'production'){
 
 
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || 9000 , ()=>{
     console.log('Server started');
 });
