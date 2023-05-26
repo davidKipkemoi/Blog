@@ -8,7 +8,7 @@ const categoryRoute = require('./routes/categories');
 const postsRoute = require('./routes/posts');
 const multer = require('multer')
 const path = require("path");
-
+const cors = require("cors")
 
 dotenv.config();
 
@@ -41,7 +41,7 @@ const upload = multer({storage:storage});
 
 
 app.use(express.json())
-
+app.use(cors());
 
 
 app.use("/api/auth",authRoute);
