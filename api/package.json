@@ -14,13 +14,10 @@
   },
   "name": "api",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.15.0"
-  },
+ 
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",

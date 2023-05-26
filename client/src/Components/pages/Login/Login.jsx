@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./login.css";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
-import { axiosInstance } from "../../../config";
+import axios from "axios"
 
 export default function Login() {
 const {dispatch,isFetching} = useContext(Context);
@@ -13,7 +13,7 @@ const handleSubmit = async (e)=>{
   e.preventDefault();
   dispatch({type:"LOGIN_START"});
   try {
-    const res = await axiosInstance.post("/auth/login", {
+    const res = await axios.post("/auth/login", {
       username:userRef.current.value,
       password:passwordRef.current.value
     });
