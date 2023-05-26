@@ -52,6 +52,6 @@ app.use("/images", express.static(path.join(__dirname,"/images")))
 
 
 
-app.listen("https://safari-blog.onrender.com", ()=>{
+app.listen("7000", ()=>{
     console.log('Server started');
 });
