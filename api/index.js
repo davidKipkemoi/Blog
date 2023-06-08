@@ -9,6 +9,7 @@ const postsRoute = require('./routes/posts');
 const multer = require('multer')
 const path = require("path");
 const cors = require("cors")
+const PORT = process.env.PORT || 7000
 
 dotenv.config();
 
@@ -52,6 +53,6 @@ app.use("/images", express.static(path.join(__dirname,"/images")))
 
 
 
-app.listen("7000", ()=>{
+app.listen(PORT, ()=>{
     console.log('Server started');
 });

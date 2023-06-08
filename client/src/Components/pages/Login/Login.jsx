@@ -13,7 +13,7 @@ const handleSubmit = async (e)=>{
   e.preventDefault();
   dispatch({type:"LOGIN_START"});
   try {
-    const res = await axios.post("https://safari-blog.onrender.com/api/login", {
+    const res = await axios.post("/auth/login", {
       username:userRef.current.value,
       password:passwordRef.current.value
     });
