@@ -10,7 +10,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:7000/images/";
+  const PF = "https://safari-blog.onrender.com/api/images/";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);

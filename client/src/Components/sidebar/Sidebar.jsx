@@ -6,7 +6,7 @@ export default function Sidebar() {
   const [categories,setCategories] = useState([])
   useEffect(()=>{
     const getCat = async()=>{ 
-      const res = await axios.get("/https://safari-blog.onrender.com")
+      const res = await axios.get("https://safari-blog.onrender.com/api/cateegories")
       setCategories(res.data)
     };
     getCat();
