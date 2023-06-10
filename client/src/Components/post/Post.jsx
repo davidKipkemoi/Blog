@@ -17,7 +17,7 @@ export default function Post({post}) {
               {post.categories}
           </span>
         </div>
-        <Link to = {`/post/${post._id}`}>
+        <Link to = {`https://safari-blog.onrender.com/api/post/${post._id}`}>
         <span className="postTitle">
         {post.title}
         </span>
