@@ -2,7 +2,7 @@ import "./post.css";
 import {Link} from 'react-router-dom'
 
 export default function Post({post}) {
-  const PF = "https://safarierblog.netlify.app/api/images/"
+  const PF = "https://safari-blog.onrender.com/images/"
   return (
     <div className="post">
       {post.photo && <img
