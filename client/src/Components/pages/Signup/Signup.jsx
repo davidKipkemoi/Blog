@@ -16,7 +16,7 @@ export default function Signup() {
         email,
         password,
       });
-      res.data && window.location.replace("https://safari-blog.onrender.com/api/login")
+      res.data && window.location.replace("https://safarierblog.netlify.app/login")
     } catch (err) {
       setError(true);
     }
