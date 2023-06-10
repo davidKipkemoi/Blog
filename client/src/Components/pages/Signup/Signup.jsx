@@ -11,12 +11,12 @@ export default function Signup() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("/auth/signup",{
+      const res = await axios.post("https://safari-blog.onrender.com/api/auth/signup",{
         username,
         email,
         password,
       });
-      res.data && window.location.replace("/login")
+      res.data && window.location.replace("https://safari-blog.onrender.com/api/login")
     } catch (err) {
       setError(true);
     }
