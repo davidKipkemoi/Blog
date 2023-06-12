@@ -21,8 +21,7 @@ export default function Sidebar() {
           alt=""
         />
         <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
+         This Safari blog by Blitz Kenya is a platform where you can connect with nature by posting some of your experience here.
         </p>
       </div>
       <div className="sidebarItem">
