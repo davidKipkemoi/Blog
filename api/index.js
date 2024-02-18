@@ -13,17 +13,19 @@ const PORT = process.env.PORT || 7000
 
 dotenv.config();
 
-mongoose.connect(
-    process.env.MONGO_URL,
-    { 
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify:false },
-    () => {
-      console.log("Connected to MongoDB");
-    }
-  );
+mongoose.connect(process.env.MONGO_URL, { 
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify:false
+})
+.then(() => {
+  console.log("Connected to MongoDB");
+})
+.catch((error) => {
+  console.error("Error connecting to MongoDB:", error);
+});
+
   
 const storage = multer.diskStorage({
   destination:(req,file,cb)=>{
